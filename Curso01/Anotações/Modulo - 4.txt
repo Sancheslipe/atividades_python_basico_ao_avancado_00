@@ -1,0 +1,26 @@
+Escopo de váriáveis
+
+1- Variáveis globais;
+	- Variáveis globais são reconhecidas, ou seja, seu escopo compreende todo o programa.
+
+2- Variáveis Locais;
+	- Variáveis locais são reconhecidas apenas no bloco onde foram declaradas, ou seja, seu escopo está limitado ao bloco onde foi declarada.
+
+python é uma linguagem de tipagem dinâmica. 
+isso significa que ao declararmos uma variáve, nós não colocamos o tipo de dado dela.
+Este tipo é inferido ao atribuírmos valor à mesma.
+
+exemplo em C:
+int numero = 42;
+
+Exemplo em Java:
+int numero = 42:
+
+numero = 42
+print(numero)
+print(type(numero))
+
+numero = 'geek'
+print(numero)
+print(type(numero))
+

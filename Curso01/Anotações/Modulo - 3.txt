@@ -1,0 +1,43 @@
+Introdução á linguagem de Python
+
+PEP8 == Boas práticas == Escrever códigos que sejam legíveis
+
+[1] - Usar Camel Case para nomes de classes; """inicial sempre Maiuscula"""
+
+[2] - Utilize nome em minúsculo, separado por underLine para funções ou variáveis;
+
+[3] - UTILIZE 4 ESPAÇOS PARA IDENTAÇÃO!!! """ ESTRITAMENTE IMPORTANTE """ (Não use tab)
+
+[4] - Separar funçõs e definições de classes com 2 linhas em branco;
+    - Métodos dentro de uma classe devem ser separados com uma única linha em branco;
+
+[5] - Imports devem sempre ser feitos em linhas separadas;
+
+[6] - Espaços em expressões e instruções;
+
+[7] - Termine sempre uma instrução com uma nova linha;
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Dir e Help
+
+dir -> Apresenta todos os atributos e funções/Métodos disponíveis para determinado tipo de dado ou variável
+
+dir(tipo de dado/variável)
+
+help -> Apresenta a documentação/como utilizar os atributos/propriedades e funções/Métodos disponíveis para determinado tipo de dado ou variável
+help(tipo de dado/variavl.propriedade)
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Recebendo dados do usuário
+#Exemplo antigo do python 2.x
+nome = input('Qual seu nome? ')
+
+#print('seja bem-vindo(a) %s'%nome )
+print(f'seja bem vindo(a) {nome.title()}')
+
+idade = int(input('Qual a sua idade?'))
+
+#print('A %s tem %s anos' % (nome, idade))
+#print('A {0} tem {1} anos'.format(nome,idade))
+print(f'A {nome.title()} Nasceu em {2022 - idade}')
+
+
+

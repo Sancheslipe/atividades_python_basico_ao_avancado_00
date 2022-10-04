@@ -1,0 +1,11 @@
+Instalação e configuração do ambiente (WINDOWS)
+
+Ambiente virtual == basicamente cria uma cópia de todos os diretórios
+necessários para que um programa Python seja executado.
+
+Desta forma, ao instalar uma nova biblioteca dentro do
+ambiente virtual criado, esta biblioteca será colocada no
+diretório do virtualenv e não mais de forma global no
+sistema operacional.
+
+
