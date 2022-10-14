@@ -21,4 +21,4 @@ for index , div in enumerate(divisores):
 soma = soma - num
 # print(f'Estes são os divisores {divisores} ')
 
-print(f'esta é a soma{soma} ')
+print(f'esta é a soma {soma} ')

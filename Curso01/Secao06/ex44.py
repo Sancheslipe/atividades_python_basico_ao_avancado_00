@@ -1,5 +1,6 @@
 num = input('digite um numero')
 if num.isdigit():
+    num = int(num)
     fibonacci = []
     cont = 0
     antecessor = 0
@@ -12,6 +13,7 @@ if num.isdigit():
         sucessor = sucessor + antecessor
         if num < antecessor :
             executar  = False    
+    
 
     print(fibonacci)
 else:

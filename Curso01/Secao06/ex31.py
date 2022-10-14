@@ -12,7 +12,6 @@ denominador = 1
     
 
 while (numerador >= 1) and (numerador <= 99) and (denominador >= 1) and (denominador <= 55):
-    print('passou aqui')
     print(f'{numerador} / {denominador} = {numerador / denominador}') 
 
     soma = soma + (numerador / denominador) 

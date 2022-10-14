@@ -38,7 +38,7 @@ if a.isdigit():
 
             if primo == True:
                 soma = soma + i
-                print(i)
+                # print(i)
             i = i + 1
 
 
