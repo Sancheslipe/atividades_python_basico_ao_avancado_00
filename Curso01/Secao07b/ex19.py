@@ -1,81 +1,102 @@
-matriz = [[],[],[]]
-coluna = [[],[],[],[]]
+matriz = [[],[],[],[],[]]
+transposta = [[],[],[],[],[]]
+coluna = []
 matricula = 0
-mediaProvas = 0
-mediaTrabalhos =0
-notaFinal = 0
+mediaProva = 0
+mediaTrabalho = 0
 soma = 0
+notaFinal = 0
 maior = 0
-linha = 0
-col = 0
+somaGeral = 0
+media = 0
+escolha = ''
 
-
-while linha <3:
-    
-    while col <4:
-
-        matricula = int(input('digite o seu numero de matricula '))
-        
-        mediaProvas = int(input('digite a media das suas provas '))
-        mediaTrabalhos = int(input('digite a media dos trabalhos'))
-        soma = mediaProvas + mediaTrabalhos
-        notaFinal = soma
-
-        if col == 0 :
-            coluna.append(matricula)
-            col +=1
-            print(col)
-        
-        elif col == 1:
-            coluna.append(mediaProvas)
-            col +=1
-            print(col)
-        
-        elif col == 2:
-            coluna.append(mediaTrabalhos)
-            col +=1
-            print(col)
-        elif col == 3:
-            coluna.append(notaFinal)
-            col +=1
-            print(col)
-        if notaFinal > maior:
-            maior = matricula
-                
-        matriz[linha].append(coluna[:])
-        coluna.clear()
-    linha += 1
-    col = 0
-
-print(matricula)
-
-for l in range(0,3):
+for l in range(0,5):
     for c in range(0,4):
-        print(f' {matriz[l][c]}', end= ' ')
-    print()
+        
+        if c == 0:
+            matricula = int(input('digite a sua matricula  '))
+            coluna.append(matricula)
+            matriz[l].append(coluna[:])
+            coluna.clear()
+        
+        if c == 1:
+            mediaProva = int(input('digite a media das notas da sua prova  '))
+            soma = mediaProva
+            coluna.append(mediaProva)
+            matriz[l].append(coluna[:])
+            coluna.clear()
+        
+        if c == 2:
+            mediaTrabalho = int(input('digite a media dos trabalhos  '))
+            soma += mediaTrabalho
+            coluna.append(mediaTrabalho)
+            matriz[l].append(coluna[:])
+            coluna.clear()
+        
+        if c == 3:
+            notaFinal = soma
+            somaGeral += notaFinal
+            coluna.append(notaFinal)
+            matriz[l].append(coluna[:])
+            coluna.clear()
+            if notaFinal > maior:
+                maior = matricula
+        
+    soma = 0
+
+for l in range(0,5):
+    for c in range(0,4):
+        transposta[c].append(matriz[l][c])
+
+
+escolha = input('se voce deseja ver em Matriz digite [M], se voce deseja ver em transposta digite [t]')
+if escolha.upper() == 'M':
+
+        
+    print(f'matricula,', end='')
+
+       
+    print(f'prova,', end='')
+        
+        
+    print(f'trabalho,', end='')
+        
+        
+    print(f'nota final')
+
+    for l in range(0,5):
+        
+        for c in range(0,4):
+            print(f'{matriz[l][c]:}', end = ' ')
+        print()
+    media = somaGeral /4
+
+    print(f'\nA matricula do aluno com a maior nota final é {maior}')
+    print(f' a média das notas finais é {media}')
+else:
+    for l in range(0,4):
+        if l == 0:
+            print(f'matricula', end='  :')
+
+        if l == 1:
+            print(f'prova', end='      :')
+        
+        if l ==2:
+            print(f'trabalho', end='   :')
+        
+        if l == 3:
+            print(f'nota final', end=' :')
+
+        for c in range(0,5):
+            print(f'{transposta[l][c]:}', end = ' ')
+        print()
+
+media = somaGeral /5
+
+print(f'\nA matricula do aluno com a maior nota final é {maior}')
+print(f' a média das notas finais é {media}')
 
 
 
-# matriz = [[],[],[]]
-# transposta = [[],[],[]]
-# coluna = []
-# for l in range(0,3):
-#     for c in range(0,3):
-#         coluna.append(int(input('digite um numero  ')))
-#         matriz[l].append(coluna[:])
-#         coluna.clear()
 
-# for l in range(0,3):
-#     for c in range(0, 3):
-#         transposta[c].append(matriz[l][c])
-
-# for l in range(0,3):
-#     for c in range(0,3):
-#         print(f' {matriz[l][c]}', end ='')
-#     print()
-# print('-='*45)
-# print('matriz transposta')
-# for l in range(0,3):
-#     for c in range(0, 3):
-#         print(f' {transposta[l][c]}', end = ',')
-#     print()
